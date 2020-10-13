@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#000"
+    android:keepScreenOn="true">
+    
+    <TextView
+            android:id="@+id/timer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:gravity="center"
+            android:text="@string/timerVal"
+            android:textColor="#fff"
+            android:textSize="50sp" 
+            android:typeface="serif"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="164dp"
+        android:layout_height="208dp"
+        android:layout_above="@+id/start"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/timer"
+        android:layout_toLeftOf="@+id/button1"
+        android:background="#000"
+        android:textColor="#fff" 
+        android:stackFromBottom="true"
+		android:transcriptMode="normal">
+
+    </ListView>
+
+            <Button
+                android:id="@+id/data"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="#000"
+                android:text="Send"
+                style="@style/button_text" />
+
+            <Button
+                android:id="@+id/avg"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="#000"
+                android:text="AVG"
+                style="@style/button_text"
+     />
+
+            <Button
+                android:id="@+id/lap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/data"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/yello"
+                android:text="Lap"
+                style="@style/button_text"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lap"
+                android:layout_toRightOf="@+id/list"
+                android:background="@drawable/green"
+                android:text="@string/reset"
+                style="@style/button_text" 
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/lap"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/list"
+                android:background="@drawable/red_button"
+                android:text="@string/start"
+                 android:textSize="30sp"
+                style="@style/button_text" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/reset"
+                android:layout_alignTop="@+id/list"
+                style="@style/button_text"
+                android:text="Average :" />
+
+            <TextView
+                android:id="@+id/avgc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/textView1"
+                android:text="0:00:00:000" 
+                 android:textSize="15sp"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_centerVertical="true"
+                android:text="0:00:00:000"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/acc"
+                android:layout_alignLeft="@+id/avgc"
+                android:layout_below="@+id/av"
+                android:layout_marginBottom="14dp"
+                android:text="Cumulative :"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+</RelativeLayout>

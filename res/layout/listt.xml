@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#000">
+    
+    <TextView
+            android:id="@+id/timer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:gravity="center"
+            android:text="@string/timerVal"
+            android:textColor="#fff"
+            android:textSize="50sp" 
+            android:typeface="serif"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="164dp"
+        android:layout_height="208dp"
+        android:layout_above="@+id/start"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/timer"
+        android:layout_toLeftOf="@+id/button1"
+        android:background="#000"
+        android:textColor="#fff" 
+        android:stackFromBottom="true"
+		android:transcriptMode="normal">
+
+    </ListView>
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lap"
+            android:layout_alignParentLeft="true"
+            android:background="#00ff00"
+            android:text="@string/reset"
+            android:textColor="#000"
+            android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/data"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="#000"
+                android:text="clear"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/avg"
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="#000"
+                android:text="avg"
+                android:textColor="#fff"
+     />
+
+            <Button
+                
+                android:id="@+id/start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/reset"
+                android:layout_alignParentLeft="true"
+                android:background="#ff0000"
+                android:text="@string/start"
+                android:textColor="#000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/lap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/data"
+                android:layout_alignParentLeft="true"
+                android:background="#ffdf04"
+                android:text="Lap"
+                android:textColor="#000"
+                android:textSize="30sp" />
+
+</RelativeLayout>
